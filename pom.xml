@@ -37,10 +37,10 @@
 				    <cloudHubDeployment>
 				      <uri>https://anypoint.mulesoft.com</uri>
 				      <muleVersion>${app.runtime}</muleVersion>
-				      <username>${username}</username>
-				      <password>${password}</password>
-				      <applicationName>${cloudhub.application.name}</applicationName>
-				      <environment>${environment}</environment>
+				      <username>jchotalia</username>
+				      <password>Jaydev4630</password>
+				      <applicationName>cdc-jenkin-demo</applicationName>
+				      <environment>sandbox</environment>
 				      <properties>
 				        <key>value</key>
 				      </properties>
