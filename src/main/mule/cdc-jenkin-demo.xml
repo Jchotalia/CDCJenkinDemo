@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="e417f738-5218-4187-90b9-ccf95eb5de32" >
+		<http:listener-connection host="0.0.0.0" port="8088" />
+	</http:listener-config>
+	<flow name="cdc-jenkin-demoFlow" doc:id="3a00699f-4d46-42c8-bcfa-70f70320ce55" >
+		<http:listener doc:name="Listener" doc:id="3e592b8c-ff44-48af-986e-94453503b2b3" config-ref="HTTP_Listener_config" path="/greeting">
+			<http:response >
+				<http:body ><![CDATA[#[output application/json --- payload]]]></http:body>
+			</http:response>
+		</http:listener>
+		<logger level="INFO" doc:name="Logger" doc:id="c0c38076-8150-45d6-9e61-441eb7c31974" message='"Request Received."'/>
+		<set-payload value='#[{
+	"status": "Success",  
+	"message": "Hello Friends - Welcome to CDC project"
+}]' doc:name="Set Payload" doc:id="103c267b-51fc-4ff7-a03d-e24d6ae6fc01" />
+		<logger level="INFO" doc:name="Logger" doc:id="3afc6a9d-e5ad-48c3-9622-d2f5c79fca3d" message='"Response Sent"'/>
+	</flow>
+</mule>
