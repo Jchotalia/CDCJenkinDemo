@@ -16,7 +16,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<logger level="INFO" doc:name="Logger" doc:id="c0c38076-8150-45d6-9e61-441eb7c31974" message='"Request Received."'/>
 		<set-payload value='#[{
 	"status": "Success",  
-	"message": "CI/CD execution Successful."
+	"message": "Hello Team, CI/CD execution Successful."
 }]' doc:name="Set Payload" doc:id="103c267b-51fc-4ff7-a03d-e24d6ae6fc01" />
 		<logger level="INFO" doc:name="Logger" doc:id="3afc6a9d-e5ad-48c3-9622-d2f5c79fca3d" message='"Response Sent"'/>
 	</flow>
