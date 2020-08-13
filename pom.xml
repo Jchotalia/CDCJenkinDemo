@@ -31,6 +31,8 @@
 				      <muleVersion>${app.runtime}</muleVersion>
 				      <username>jrealtor</username>
 				      <password>Jaydev4630</password>
+				      <workers>1</workers>
+				      <workerType>Micro</workerType>
 				      <applicationName>cdc-jenkin-demo</applicationName>
 				      <environment>dev</environment>
 				      <properties>
