@@ -32,7 +32,7 @@
 				      <username>jrealtor</username>
 				      <password>Jaydev4630</password>
 				      <applicationName>cdc-jenkin-demo</applicationName>
-				      <environment>SANDBOX</environment>
+				      <environment>dev</environment>
 				      <properties>
 				        <key>value</key>
 				      </properties>
