@@ -34,7 +34,8 @@
 				      <workers>1</workers>
 				      <workerType>Micro</workerType>
 				      <applicationName>cdc-jenkin-demo</applicationName>
-				      <environment>Sandbox</environment>				      
+				      <environment>Sandbox</environment>
+					    <objectStoreV2>true</objectStoreV2>
 				    </cloudHubDeployment>
 				  </configuration>
 			</plugin>
